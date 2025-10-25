@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #F7C8E0;
+    --primary-color: #FFFFFF;
+    --accent-color: #689ef5;
+    --gray-900: #212121;
+    --grey-800: #424242;
+    --grey-700: #616161;
+    --grey-400: #BDBDBD;
+    --grey-200: #EEEEEE;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Playfair Display', serif;
+}
+
+main {
+    max-width: 30rem;
+    margin: auto;
+    min-height: 50vh;
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
+}
+
+h1 {
+    color: var(--grey-900);
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.5rem;
+    background-color: var(--accent-color);
+}
+
+h2 {
+    text-align: center;
+    color: var(--grey-800);
+    flex: 1;
+}
+
+h3 {
+    align-self: flex-end;
+    color: var(--grey-800);
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+    min-width: 10rem;
+    background-color: var(--accent-color);
+    border-radius: 4rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: 0.75px;
+}
+
+button:is(:hover, :active) {
+    border: none;
+    outline: none;
+}
+
+button:disabled {
+    filter: opacity(0.5);
+}
+
+#share-tweet {
+    border: 2px solid var(--grey-400);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+}
+
+#share-tweet svg {
+    height: 1.25rem;
+    fill: var(--accent-color);
+    align-items: center;
+}
+
+@media screen and (min-width: 30rem) {
+    main {
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        height: min-content;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 1rem;
+
+    }
+}
